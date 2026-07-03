@@ -1,0 +1,18 @@
+1. json array ( reviews )
+2. hosting
+3. node js(?)
+4. optimisation ( phone screen and loading time, network(?) )
+5. search tags 	
+6. scss
+
+
+required blocks:
+
+
+main page:
+1. hero
+2. stats
+3. services
+4. won casesa
+5. about me
+6. 

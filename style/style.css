@@ -1,0 +1,141 @@
+* {
+    transition: 0.3s;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #09161e;
+}
+header {
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;
+    position: fixed;
+    border-bottom: 2px solid #dc9f4e;
+    background-color: #09161e;
+    width: 100%;
+    justify-content: space-between;
+}
+main {
+    margin-top: 50px;
+}
+.logo {
+    color: #dc9f4e;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Huninn", sans-serif;
+}
+.navigation {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+}
+.navigation a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Chiron GoRound TC", sans-serif;
+}
+.navigation a:hover {
+    color: #dc9f4e;
+}
+.navigation .current {
+    color: #dc9f4e;
+}
+.header-contacts {
+    color: #dc9f4e;
+    font-size: 15px;
+    background: none;
+    border: none;
+    margin-right: 4%;
+
+}
+.hero-section {
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #dc9f4e;
+}
+.hero {
+    background: url("../assests/hero-bg-test-blue.jpg");                                                                                        
+    background-size: 100%;
+    margin: 0;
+    padding: 70px;
+    height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.hero h1 {
+    font-size: 60px;
+    font-weight: lighter;
+    font-family: "Orelega One", serif;
+}
+.hero h1 span {
+    color: #dc9f4e;
+}
+.hero .hero-name {
+    color: #dc9f4e;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-family: "Huninn", sans-serif;
+}
+.hero p {
+    color: rgb(202, 202, 202);
+    font-weight: lighter;
+    max-width: 75%;
+    text-align: left;
+    line-height: 20px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+}
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+.hero button {
+    padding: 17px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 40px;
+    background-color:  #dc9f4e;
+    font-weight: bold;
+    color: #213b48;
+    border: 2px solid #dc9f4e;
+    font-size: 20px;
+}
+.hero button:hover {
+    background-color: #213b4800;
+    color: #dc9f4e;
+    border: 2px solid #dc9f4e;
+}
+.hero .hero-call-us {
+    background-color: #213b4800;
+    color: #dc9f4e;
+    border: 2px solid #dc9f4e;
+}
+.hero .hero-call-us:hover {
+    background-color: #dc9f4e;
+    color: #213b48;
+}
+.hero-left {
+    max-width: 50%;
+    float: left;
+}
+.hero-right img{
+    max-width: 75%;
+    max-height: 800px;
+    float: right;
+    border: 3px solid #dc9f4e;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 0px #62643A;
+}
+.hero-right {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    width: fit-content;
+}
