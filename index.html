@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Huninn&family=Orelega+One&display=swap" rel="stylesheet">
     <title>Testik</title>
-<!-- <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
     const formElement = document.getElementById('consultationForm');
     
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-</script> -->
+</script>
 </head>
 <body>
     <header>
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="">Статті</a>
             <a href="">Виграні справи</a>
             <a href="">Про нас</a>
-            <a href="">Контакти</a>
+            <a href="tel:+380677936480">Call Us</a>
         </div>
         <button class="header-contacts">+380-99-287-39-57</button>
     </header>
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="hero-name">Кравченко Олександр Миколайович</p>
                     <h1 class="hero-title"><span>Професійна</span> юридична допомога по всій Україні</h1>
                     <p>Допомагаємо вам захищати права з професіоналізмом та відповідальністю.
-Надаємо кваліфіковану юридичну допомогу в Київ, Київська область та по всій Україна. Захист у кримінальних, цивільних та адміністративних справах, консультації та представництво ваших інтересів у суді. Ваші права — наш пріоритет.</p>
+                    Надаємо кваліфіковану юридичну допомогу в Київ, Київська область та по всій Україна. Захист у кримінальних, цивільних та адміністративних справах, консультації та представництво ваших інтересів у суді. Ваші права — наш пріоритет.</p>
                     <div class="hero-buttons">
                         <button class="hero-free-consultation">Безкоштова консультація</button>
                         <button class="hero-call-us">Зателефонуйте нам</button>
@@ -127,14 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <form id="consultationForm">
                 <div>
                     <label for="user-name" style="color: white;">Name:</label>
-                    <input type="text" id="user-name" name="name" required placeholder="John Doe">
+                    <input type="text" id="user-name" name="name" required placeholder="Ім'я прізвище">
                 </div>
                 <br>
                 <div>
                     <label for="user-phone" style="color: white;">Phone Number:</label>
-                    <input type="tel" id="user-phone" name="phone" required placeholder="+1 (555) 000-0000">
+                    <input type="tel" id="user-phone" name="phone" required placeholder="+380671234567">
                 </div>
                 <br>
+                <!-- <div>
+                    <label for="user-phone" style="color: white;">Phone Number:</label> 
+
+                </div> -->
                 <button type="submit">Submit</button>
             </form>
         </section>
