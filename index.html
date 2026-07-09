@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Gabriela&family=Huninn&family=Orelega+One&family=Poppins:wght@300&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Gabriela&family=Huninn&family=Orelega+One&family=Poppins:wght@300&display=swap" rel="stylesheet">  
     <title>Testik</title>
+    <script src="js/navigation-manu.js" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const formElement = document.getElementById('consultationForm');
@@ -50,8 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
 </head>
 <body>
     <header>
-        <div class="header">
-            <div class="logo">Kr.Alex Group</div>
+        <div class="logo">
+            <span>Kr.Alex Group</span>
+            <button class="menu-button">
+                <svg fill="#1b6044" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 377 377" xml:space="preserve">
+                    <g>
+                        <circle cx="15" cy="88.5" r="15"/>
+                        <rect x="75" y="73.5" width="250" height="30"/>
+                        <circle cx="15" cy="288.5" r="15"/>
+                        <rect x="75" y="273.5" width="250" height="30"/>
+                        <circle cx="15" cy="188.5" r="15"/>
+                        <rect x="75" y="173.5" width="250" height="30"/>
+                    </g>
+                </svg>
+            </button>
         </div>
         <div class="navigation">
             <a href="" class="current">Головна</a>
@@ -62,6 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="tel:+380992873957">Контакти</a>
         </div>
         <button class="header-contacts">+380-99-287-39-57</button>
+          <div class="header-menu-navigation">
+                <a href="" class="current">Головна</a>
+                <a href="">Послуги</a>
+                <a href="">Статті</a>
+                <a href="">Виграні справи</a>
+                <a href="">Про нас</a>
+                <a href="tel:+380992873957">Контакти</a>
+            </div>
     </header>
     <main>
         <section class="hero-section">
