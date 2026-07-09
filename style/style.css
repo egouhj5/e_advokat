@@ -301,25 +301,6 @@ header .current {
         max-height: 740px;
     }
 }
-@media (max-width: 1106px) {
-    .menu-button {
-        display: flex;
-    }
-    .navigation {
-        display: none;
-    }
-    .header-contacts {
-        display: none;
-    }
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-    .logo {
-        width: 100%;
-    }
-}
 @media (max-width: 955px) {
     .hero {
         gap: 20px;
@@ -354,5 +335,24 @@ header .current {
     }
     .services div h4 {
         margin: 10px;
+    }
+}
+@media (max-width: 1106px) {
+    .menu-button {
+        display: flex;
+    }
+    .navigation {
+        display: none;
+    }
+    .header-contacts {
+        display: none;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .logo {
+        width: 100%;
     }
 }
