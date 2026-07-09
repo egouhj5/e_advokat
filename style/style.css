@@ -12,45 +12,72 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: center;
-    gap: 10%;
+    justify-content: space-between;
     padding: 20px;
-    border-bottom: 2px solid #dc9f4e;
-    background-color: #091218;
+    margin: 0px;
+    border-bottom: 2px solid #f1c080;
+    background: linear-gradient(227deg,rgb(189, 157, 92) 10.5%, rgb(232, 204, 138) 24.5%, rgb(189, 157, 92) 50%, rgb(189, 157, 92) 60%, rgb(232, 204, 138) 70%, rgb(154, 107, 59) 100%);
+    z-index: 9999;
+    box-shadow: 0px 5px 27px 0px rgba(0,0,0,0.59);
 }
 main {
     margin-top: 50px;
 }
 .logo {
-    color: #dc9f4e;
-    font-weight: bold;
+    /* color: #1b6044; */
+    font-weight: light;
     font-size: 25px;
-    font-family: "Huninn", sans-serif;
+    font-family: "Chiron GoRound TC", sans-serif;
+    /* background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%); */
+    padding: 10px;
+    /* border-radius: 10px; */
+    /* border: 2px #C9AA6C solid; */
+    background-color: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.312);
+    color: #C9AA6C;
+}
+.logo span {
+    font-weight: 300;
+    font-size: 35px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    line-height: 1px;
 }
 .navigation {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     margin-left: 4%;
 }
 .navigation a {
+    padding: 5px;
     text-decoration: none;
-    color: #ffffff;
-    font-family: "Chiron GoRound TC", sans-serif;
+    color: #37584b;
+    border-radius: 5px;
+    font-family: "Gabriela", serif;
+    border: 3px solid rgba(0, 0, 0, 0);
+    font-weight: 600;
+    font-size: 18px;
 }
 .navigation a:hover {
-    color: #dc9f4e;
+    color: #1b6044;
+    border: 3px solid #1b6044;
+    border-radius: 5px;
 }
 .navigation .current {
-    color: #dc9f4e;
+    color: #1b6044;
+    border: 3px solid #1b6044;
+    border-radius: 5px;
 }
 .header-contacts {
-    color: #dc9f4e;
-    font-size: 15px;
+    color: #1b6044;
+    font-size: 16px;
     background: none;
     border: none;
     margin-right: 4%;
+    font-weight: bold;
 
 }
 .hero-section {
@@ -219,7 +246,7 @@ main {
     font-weight: 600;
 }
 .services p {
-    font-size: 15px;
+    font-size: 16px;
     font-family: "Gabriela", serif;
     text-transform: none;
     color: #a18d64;
