@@ -31,6 +31,7 @@ header {
     background: none;
     border: none;
     padding: 0;
+    border: 2px solid red;
 } 
 main {
     margin-top: 50px;
