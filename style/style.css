@@ -26,11 +26,10 @@ header {
     display: none;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: none;
     border: none;
-    padding: 0;
 } 
 main {
     margin-top: 50px;
