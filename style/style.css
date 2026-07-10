@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     transition: 0.3s;
 }
@@ -147,9 +150,9 @@ header .current {
 
 .hero p {
     flex: 1;
-    color: #a18d64;
     max-width: 75%;
     text-align: left;
+    color: #a18d64;
     line-height: 20px;
     font-family: "Gabriela", serif;
     font-weight: lighter;
@@ -160,7 +163,8 @@ header .current {
     flex-wrap: wrap;
     gap: 12px;
 }
-.hero button {
+.hero a, .services-page-services a,
+.services-page-consulation-card a {
     flex: 1;
     padding: 15px;
     border-radius: 5px;
@@ -172,8 +176,14 @@ header .current {
     color: #1a4735;
     border: 2px solid #C9AA6C;
     font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.hero button:hover {
+.hero a:hover, .services-page-services a:hover,
+.services-page-consulation-card a:hover {
     background: #213b4800;
     border: 2px solid #C9AA6C;
     color: #C9AA6C;
@@ -338,6 +348,159 @@ header .current {
     height: 100%;
     background: linear-gradient(rgba(239, 217, 167, 1) 0%,  rgba(201, 170, 108, 1) 50%,  rgb(168, 122, 76) 100%);
 }
+.services-page {
+    background: linear-gradient(206deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+.services-page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 7px;
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
+    max-width: 800px;
+    width: 80%;
+}
+
+.services-page-title p {
+    color: #a18d64;
+    font-size: 16px;
+    font-family: "Huninn", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+.services-page-title .services-page-description {
+    max-width: 80%;
+    text-align: center;
+    color: #a18d64;
+    line-height: 20px;
+    font-family: "Gabriela", serif;
+    font-weight: lighter;
+    font-size: 16px;
+    text-transform: none;
+}
+.services-page-title h3 {
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+.services-page-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+.services-page-services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    background-color: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 7px;
+    gap: 5px;
+    padding: 20px;
+    min-width: 400px;
+    max-width: 400px;
+    height: 450px;
+    margin: 40px 0;
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
+}
+.services-page-services-card svg {
+    margin: 10px;
+    min-width: 20px;
+    min-height: 20px;
+}
+.services-page-services h4 {
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 30px;
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+.services-page-services-points {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.services-page-services p {
+    color: #a18d64;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 5px;
+    padding: 0;
+    margin: 5px;
+    font-family: "Gabriela", serif;
+    font-weight: lighter;
+    font-size: 16px;
+    text-transform: none;
+}
+.services-page-services a {
+    margin: 0;
+    align-self: center;
+    display: flex;
+    width:  100%;
+    box-sizing: border-box;
+    max-height: 70px;
+}
+.services-page-consultation {
+    border-top: 2px solid #C9AA6C;
+    background: linear-gradient(26deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.services-page-consulation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 40px;
+}
+.services-page-consulation-card p {
+    color: #a18d64;
+    font-size: 16px;
+    font-family: "Huninn", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 20px;
+    text-align: center;
+}
+.services-page-consulation-card h3 {
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.services-page-consulation-card a {
+    margin: 30px 0 0 0;
+}
 @media (max-width: 1120px) {
     .hero {
         justify-content: center;
@@ -386,6 +549,10 @@ header .current {
     }
     .services div h4 {
         margin: 10px;
+    }
+        .services-page-services-card {
+        min-width: 0;
+        max-width: 500px;
     }
 }
 @media (max-width: 1106px) {
