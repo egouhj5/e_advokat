@@ -10,7 +10,7 @@
     <title>Testik</title>
     <script src="js/navigation-menu.js" defer></script>
     <script>
-        fetch('assests/svg/svg.html')
+        fetch('assets/svg/svg.html')
         .then(response => response.text())
         .then(data => {
             const div = document.createElement('div');
@@ -39,24 +39,24 @@
                 </svg>
             </button>
         </div>
-        <div class="navigation">
+        <nav class="navigation">
             <a href="index.html">Головна</a>
             <a href="services.html" class="current">Послуги</a>
-            <a href="">Статті</a>
+            <a href="articles.html">Статті</a>
             <a href="">Виграні справи</a>
             <a href="">Про нас</a>
             <a href="">Контакти</a>
-        </div>
+        </nav>
         <a class="header-contacts" href="tel:+380992873957">+380-99-287-39-57</a>
-            <div class="header-menu-navigation">
+            <nav class="header-menu-navigation">
                 <a href="index.html">Головна</a>
                 <a href="services.html" class="current">Послуги</a>
-                <a href="">Статті</a>
+                <a href="articles.html">Статті</a>
                 <a href="">Виграні справи</a>
                 <a href="">Про нас</a>
                 <a href="">Контакти</a>
                 <a class="header-menu-contacts" href="tel:+380992873957">+380-99-287-39-57</a>
-            </div>
+            </nav>
     </header>
     <main>
         <section class="services-page">

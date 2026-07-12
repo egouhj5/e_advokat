@@ -21,7 +21,16 @@ main page:
 
 rewrite services (rephrase)
 
+11.07 {
+    header/footer file split - not needed but optimization in mind
 
+    articles
+}
+12.07 {
+    cases-won
+}
+
+!!!ask for legal-consultations!!!
 
 
 optimisations :
@@ -33,3 +42,19 @@ Tap Targets: Buttons and links must be large enough (at least 48x48 pixels) and 
 Font Sizes: Text should never drop below 12px (ideally stay at 16px for body text on mobile) so users don't have to pinch-to-zoom.
 
 Test with Google Search Console: Once your site is live, use Google Search Console's "URL Inspection" tool to verify that Google considers your pages mobile-friendly.
+
+another optimisation from gemini :
+
+<header>
+    <nav aria-label="Main Navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+</header>
+
+<footer>
+    <nav aria-label="Footer Navigation">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+    </nav>
+</footer>

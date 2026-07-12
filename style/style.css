@@ -164,7 +164,10 @@ header .current {
     gap: 12px;
 }
 .hero a, .services-page-services a,
-.services-page-consulation-card a {
+.services-page-consulation-card a,
+.articles a,
+.articles-all-articles,
+.article-article a {
     flex: 1;
     padding: 15px;
     border-radius: 5px;
@@ -183,18 +186,28 @@ header .current {
     align-items: center;
 }
 .hero a:hover, .services-page-services a:hover,
-.services-page-consulation-card a:hover {
+.services-page-consulation-card a:hover,
+.articles a:hover,
+.articles-all-articles:hover,
+.article-article a:hover {
     background: #213b4800;
     border: 2px solid #C9AA6C;
     color: #C9AA6C;
 }
-.hero .hero-call-us {
+.article-article a {
+    width: 90%;
+
+    box-sizing: border-box;
+}
+.hero .hero-call-us,
+.article-consultation .article-call-us {
     background: none;
     background-color: #213b4800;
     color: #C9AA6C;
     border: 2px solid #C9AA6C;
 }
-.hero .hero-call-us:hover {
+.hero .hero-call-us:hover,
+.article-consultation .article-call-us:hover {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
     color: #1a4735;
 }
@@ -262,7 +275,8 @@ header .current {
     margin: 0;
     padding: 0;
 }
-.services-section {
+.services-section,
+.articles-section {
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -271,7 +285,8 @@ header .current {
     position: relative;
     background: linear-gradient(45deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
 }
-.services-section p {
+.services-section p,
+.articles-section p {
     color: #a18d64;
     font-size: 16px;
     font-family: "Huninn", sans-serif;
@@ -279,7 +294,8 @@ header .current {
     text-transform: uppercase;
     margin: 0;
 }
-.services-section h2 {
+.services-section h2,
+.articles-section h2 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -293,14 +309,15 @@ header .current {
     /* border-bottom: 5px solid #dc9f4e;
     box-shadow: 0px 31px 29px -26px rgba(98,100,58,0.77); */
 }
-.services {
+.services, .articles {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
     z-index: 2;
 }
-.services div {
+.services div,
+.articles div {
     max-width: 300px;
     margin: 50px;
     padding: 20px;
@@ -309,10 +326,12 @@ header .current {
     border-radius: 7px;
     box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
 }
-.services div:hover {
+.services div:hover,
+.articles div:hover {
     box-shadow: 0px 5px 23px 10px rgba(0,0,0,0.49);
 }
-.services h4 {
+.services h4,
+.articles h4 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -320,13 +339,15 @@ header .current {
     font-family: "Cormorant SC", serif;
     font-weight: 600;
 }
-.services p {
+.services p,
+.articles p {
     font-size: 16px;
     font-family: "Gabriela", serif;
     text-transform: none;
     color: #a18d64;
 }
-.services-header {
+.services-header,
+.articles-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -348,7 +369,38 @@ header .current {
     height: 100%;
     background: linear-gradient(rgba(239, 217, 167, 1) 0%,  rgba(201, 170, 108, 1) 50%,  rgb(168, 122, 76) 100%);
 }
-.services-page {
+.articles-section {
+    border-top: 2px solid #C9AA6C;
+    align-items: center;
+    padding: 5%;
+    background: linear-gradient(135deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
+    background-color: #f1c080;
+}
+.articles p {
+    margin: 30px 0;
+}
+.articles div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.articles a {
+    max-height: 25px;
+}
+.articles .articles-category {
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.articles-all-articles {
+    width: 80%;
+    margin-top: 60px;
+    max-width: 400px;
+    height: 1px;
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
+}
+.services-page,
+.articles-page,
+.article-page {
     background: linear-gradient(206deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
     padding: 100px 10%;
     display: flex;
@@ -356,7 +408,13 @@ header .current {
     gap: 50px;
     align-items: center;
 }
-.services-page-title {
+.articles-page {
+    padding: 100px 40px;
+}
+.services-page-title,
+.articles-page-title,
+.article-page-title,
+.article-article  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -367,8 +425,28 @@ header .current {
     max-width: 800px;
     width: 80%;
 }
-
-.services-page-title p {
+.article-page-title,
+.article-article {
+    max-width: 80%;
+    align-items: start;
+    padding: 40px;
+}
+.article-page-back-button {
+    color: #a18d64;
+    font-size: 16px;
+    font-family: "Huninn", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #C9AA6C;
+}
+.services-page-title p,
+.articles-page-title p {
     color: #a18d64;
     font-size: 16px;
     font-family: "Huninn", sans-serif;
@@ -376,7 +454,10 @@ header .current {
     text-transform: uppercase;
     margin: 20px;
 }
-.services-page-title .services-page-description {
+.services-page-title .services-page-description,
+.articles-page-title .articles-page-description,
+.article-page-title .article-page-description,
+.article-article p {
     max-width: 80%;
     text-align: center;
     color: #a18d64;
@@ -386,7 +467,61 @@ header .current {
     font-size: 16px;
     text-transform: none;
 }
-.services-page-title h3 {
+.article-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+    flex: 3;
+}
+.article-article span {
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 25px;
+}
+.article-article p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 40px;
+    white-space: pre-wrap;
+    border-right: 2px solid #f1c080;
+    padding: 20px;
+    margin: 20px;
+    width: 60%;
+}
+.article-article .article-bold {
+    background: none;
+    color: #a18d64;
+    font-weight: bold;
+    font-size: 22px;
+}
+.article-consultation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #426a55;
+    padding: 20px;
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
+    position: sticky;
+    flex: 1;
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
+    height: max-content;
+}
+.article-consultation p {
+    font-size: 18px;
+    line-height: normal;
+    border: none;
+    margin: auto;
+}
+.services-page-title h3,
+.articles-page-title h3,
+.article-page-title h3 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -501,6 +636,11 @@ header .current {
 .services-page-consulation-card a {
     margin: 30px 0 0 0;
 }
+@media (max-width: 1573px) {
+    .article-page {
+        padding: 100px 0;
+    }
+}
 @media (max-width: 1120px) {
     .hero {
         justify-content: center;
@@ -550,12 +690,12 @@ header .current {
     .services div h4 {
         margin: 10px;
     }
-        .services-page-services-card {
+    .services-page-services-card {
         min-width: 0;
         max-width: 500px;
     }
 }
-@media (max-width: 1106px) {
+@media (max-width: 1109px) {
     .navigation {
         display: none;
     }
@@ -576,6 +716,24 @@ header .current {
     .header-menu-navigation {
         opacity: 1;
         position: initial;
+    }
+    .article-article {
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-article p {
+        border: none;
+        border-bottom: 2px solid #f1c080;
+        width: 100%;
+    }
+    .article-page-title h3{
+        text-align: left;
+    }
+    .article-consultation p {
+        border: none;
+    }
+    .article-consultation {
+        align-self: center;
     }
 }
 .menu-icon .icon-line,
