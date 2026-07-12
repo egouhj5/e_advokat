@@ -444,8 +444,21 @@ header .current {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border-bottom: 2px solid #C9AA6C;
-    padding: 3px 7px;
+    border: 2px solid #C9AA6C;
+    padding: 6px 14px;
+    border-radius: 10px;
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    background-color: #1b6044;
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
+}
+.article-page-back-button:hover {
+    box-shadow: 0px 5px 23px 10px rgba(0,0,0,0.49);
+    color: #f1c080;
+}
+.article-page-back-button:hover svg {
+    fill: #f1c080;
 }
 .article-page-back-button svg {
     min-width: 30px;
@@ -470,8 +483,9 @@ header .current {
     line-height: 20px;
     font-family: "Gabriela", serif;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 22px;
     text-transform: none;
+    margin-top: 35px;
 }
 .article-article {
     display: flex;
@@ -512,7 +526,6 @@ header .current {
     border: 2px solid #426a55;
     padding: 20px;
     box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
-    position: sticky;
     flex: 1;
     position: sticky;
     top: 120px;
@@ -591,10 +604,6 @@ header .current {
     font-weight: lighter;
     font-size: 16px;
     text-transform: none;
-}
-.articles-page-title {
-    max-width: 100%;
-    width: 100%;
 }
 .services-page-services a {
     margin: 0;
@@ -684,6 +693,24 @@ header .current {
         max-width: 100%;
         width: 100%;
         margin: 50px 0;
+    }
+    .articles-page-title {
+    max-width: 100%;
+    width: 100%;
+    }
+    .article-article {
+        padding: 30px 0;
+        width: 100%;
+        max-width: calc(90% + 30px);
+    }
+    .article-article p {
+        line-height: 30px;
+        padding: 0;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+    .article-consultation {
+        max-width: 80%;
     }
 }
 @media (max-width:576px) {
