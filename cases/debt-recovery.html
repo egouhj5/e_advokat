@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Cormorant+SC:wght@300;400;500;600;700&family=Gabriela&family=Huninn&family=Orelega+One&family=Poppins:wght@300&display=swap" rel="stylesheet">  
+    <title>Testik</title>
+    <script src="../js/navigation-menu.js" defer></script>
+    <script>
+        fetch('../assets/svg/svg.html')
+        .then(response => response.text())
+        .then(data => {
+            const div = document.createElement('div');
+            div.style.display = 'none';
+            div.innerHTML = data;
+            document.body.insertBefore(div, document.body.firstChild);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html" class="logo-logo">Law com.Alex <span>G</span>roup</a>
+            <button class="menu-button">
+                <svg class="menu-icon" fill="#1b6044" version="1.1" id="Layer_1" xmlns="http://w3.org" xmlns:xlink="http://w3.org" viewBox="0 0 377 377" xml:space="preserve" width="100%" height="100%">
+                    <g>
+                        <circle class="icon-dot dot-top" cx="15" cy="88.5" r="15"/>
+                        <rect class="icon-line line-top" x="75" y="73.5" width="250" height="30"/>
+                        
+                        <circle class="icon-dot dot-bottom" cx="15" cy="288.5" r="15"/>
+                        <rect class="icon-line line-bottom" x="75" y="273.5" width="250" height="30"/>
+                        
+                        <circle class="icon-dot dot-middle" cx="15" cy="188.5" r="15"/>
+                        <rect class="icon-line line-middle" x="75" y="173.5" width="250" height="30"/>
+                    </g>
+                </svg>
+            </button>
+        </div>
+        <nav class="navigation">
+            <a href="../index.html">Головна</a>
+            <a href="../services.html">Послуги</a>
+            <a href="../articles.html">Статті</a>
+            <a href="../cases.html">Виграні справи</a>
+            <a href="../about-us.html">Про нас</a>
+            <a href="../contacts.html">Контакти</a>
+        </nav>
+        <a class="header-contacts" href="tel:+380992873957">+380-99-287-39-57</a>
+            <nav class="header-menu-navigation">
+                <a href="../index.html">Головна</a>
+                <a href="../services.html">Послуги</a>
+                <a href="../articles.html">Статті</a>
+                <a href="../cases.html">Виграні справи</a>
+                <a href="../about-us.html">Про нас</a>
+                <a href="../contacts.html">Контакти</a>
+                <a class="header-menu-contacts" href="tel:+380992873957">+380-99-287-39-57</a>
+            </nav>
+    </header>
+    <main>
+        <section class="article-page">
+            <div class="article-page-title">
+                <a href="../cases.html" class="article-page-back-button"><svg width="20" height="20" viewBox="0 0 16 16" fill="#C9AA6C"><use href="#back-icon"/></svg> Всі справи</a>
+                <h3>Стягнення боргу 1,2 млн грн з недобросовісного контрагента</h3>
+                <p class="article-page-description">Господарське право</p>
+            </div>
+            <div class="article-article">
+                <p>Дата:
+24 жовтня 2010
+
+<span class="case-result"><svg width="20" height="20" viewBox="0 0 352.62 352.62" fill="#1b6044"><use href="#checkmark-icon"/></svg>Результат: Стягнуто 1 200 000 грн боргу та 180 000 грн штрафних санкцій</span>
+До адвоката Кравченка звернулася будівельна компанія: контрагент отримав товар на суму 1,2 млн грн і відмовився платити, посилаючись на нібито неналежну якість поставки. Спроби домовитися провалилися. Адвокат підготував господарський позов, зібрав повний пакет документів (договір, специфікації, накладні, акти прийому-передачі, листування), спростував доводи відповідача про неналежну якість, залучивши незалежного експерта. Господарський суд повністю задовольнив позов: стягнув основний борг 1 200 000 грн та штрафні санкції 180 000 грн.</p>
+                <div class="article-consultation">
+                    <p>У вас схожа ситуація та потрібна допомога? Поздвоніть нам.</p>
+                    <a href="../contacts.html">Консультація </a>
+                    <a href="tel:+380992873957" class="article-call-us">Зателефонуйте нам</a>
+                </div>
+            </div>
+            <svg style="display: none;">
+                <defs>
+                    <g id="checkmark-icon">
+                    <path d="M337.222,22.952c-15.912-8.568-33.66,7.956-44.064,17.748c-23.867,23.256-44.063,50.184-66.708,74.664 c-25.092,26.928-48.348,53.856-74.052,80.173c-14.688,14.688-30.6,30.6-40.392,48.96c-22.032-21.421-41.004-44.677-65.484-63.648 c-17.748-13.464-47.124-23.256-46.512,9.18c1.224,42.229,38.556,87.517,66.096,116.28c11.628,12.24,26.928,25.092,44.676,25.704 c21.42,1.224,43.452-24.48,56.304-38.556c22.645-24.48,41.005-52.021,61.812-77.112c26.928-33.048,54.468-65.485,80.784-99.145 C326.206,96.392,378.226,44.983,337.222,22.952z M26.937,187.581c-0.612,0-1.224,0-2.448,0.611 c-2.448-0.611-4.284-1.224-6.732-2.448l0,0C19.593,184.52,22.653,185.132,26.937,187.581z"/>
+                    </g>
+                </defs>
+            </svg>
+        </section>
+    </main>
+</body>
+</html>

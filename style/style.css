@@ -170,6 +170,7 @@ header .current {
 .services-page-consulation-card a,
 .articles a,
 .cases-section-cases a,
+.cases-page a,
 .cases-all-cases,
 .articles-all-articles,
 .article-article a {
@@ -190,11 +191,17 @@ header .current {
     justify-content: center;
     align-items: center;
 }
+.cases-page a {
+    max-height: 30px;
+    min-height: 30px;
+    height: 30px;
+}
 .hero a:hover, .services-page-services a:hover,
 .services-page-consulation-card a:hover,
 .articles a:hover,
 .articles-all-articles:hover,
 .cases-section-cases a:hover,
+.cases-page a:hover,
 .cases-all-cases:hover,
 .article-article a:hover {
     background: #213b4800;
@@ -250,6 +257,22 @@ header .current {
     display: flex;
     justify-content: right;
     width: fit-content;
+}
+.article-article .case-result {
+    background: none;
+    color: #1b6044;
+    background: linear-gradient(90deg,rgba(239, 217, 167, 1) 0%,  rgba(201, 170, 108, 1) 50%,  rgb(168, 122, 76) 100%);
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid #f1c080;
+    border-radius: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.article-article .case-result svg {
+    padding: 10px;
 }
 .stats {
     display: flex;
@@ -320,7 +343,8 @@ header .current {
     box-shadow: 0px 31px 29px -26px rgba(98,100,58,0.77); */
 }
 .services, .articles,
-.cases-section-cases {
+.cases-section-cases,
+.cases-page{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -329,7 +353,8 @@ header .current {
 }
 .services div,
 .articles div,
-.cases-section-cases div {
+.cases-section-cases div,
+.cases-page div {
     max-width: 300px;
     margin: 50px;
     padding: 20px;
@@ -339,15 +364,23 @@ header .current {
     box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .services div:hover,
 .articles div:hover,
-.cases-section-cases div:hover {
+.cases-section-cases div:hover,
+.cases-page div:hover {
     box-shadow: 0px 5px 23px 10px rgba(0,0,0,0.49);
+}
+.cases-page div {
+    max-width: 20%;
 }
 .services h3,
 .articles h4,
-.cases-section-cases h4 {
+.cases-section-cases h4,
+.cases-page h4 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -357,7 +390,8 @@ header .current {
 }
 .services p,
 .articles p,
-.cases-section-cases p {
+.cases-section-cases p,
+.cases-page p {
     font-size: 16px;
     font-family: "Gabriela", serif;
     text-transform: none;
@@ -396,7 +430,8 @@ header .current {
     background-color: #f1c080;
 }
 .articles p,
-.cases-section-cases p {
+.cases-section-cases p,
+.cases-page p {
     margin: 30px 0;
 }
 .articles div,
@@ -429,6 +464,7 @@ header .current {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    min-height: 1080px;
     align-items: center;
 }
 .articles-page {
@@ -510,7 +546,8 @@ header .current {
     font-size: 18px;
     text-transform: none;
 }
-.cases-section-cases .cases-section-cases-category {
+.cases-section-cases .cases-section-cases-category,
+.cases-page .cases-section-cases-category {
     padding: 20px 0;
     display: flex;
     flex-direction: row;
@@ -523,10 +560,10 @@ header .current {
     border-radius: 0px;
     box-shadow: none;
     justify-content: space-between;
-    margin: 0;
     align-self: center;
     position: absolute;
     top: 0;
+    left: 0;
     background: linear-gradient(90deg,rgba(239, 217, 167, 1) 0%,  rgba(201, 170, 108, 1) 50%,  rgb(168, 122, 76) 100%);
 }
 .cases-section-cases-category p {
@@ -540,10 +577,12 @@ header .current {
 .cases-section-cases-category p:last-child {
     text-align: end;
 }
-.cases-section-cases .cases-section-cases-category:hover {
+.cases-section-cases .cases-section-cases-category:hover,
+.cases-page .cases-section-cases-category:hover {
     box-shadow: none;
 }
-.cases-section-cases div h4 {
+.cases-section-cases div h4,
+.cases-page div h4 {
     margin-top: 60px;
 }
 .article-page .article-page-description {
@@ -558,7 +597,6 @@ header .current {
     justify-content: space-between;
     align-items: start;
     gap: 20px;
-    flex: 3;
 }
 .article-article span {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
@@ -724,6 +762,9 @@ header .current {
     .article-page {
         padding: 100px 5%;
     }
+    .cases-page div {
+        max-width: 50%;
+    }
 }
 @media (max-width: 1120px) {
     .hero {
@@ -755,7 +796,8 @@ header .current {
         line-height: 30px;
     }
     .articles div,
-    .cases-section-cases div {
+    .cases-section-cases div,
+    .cases-page div {
         max-width: 100%;
         width: 100%;
         margin: 50px 0;
