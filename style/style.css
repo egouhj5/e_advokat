@@ -42,20 +42,23 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.logo span{
-    /* color: #1b6044; */
-    font-weight: light;
+.logo-logo {
     font-size: 25px;
-    font-family: "Chiron GoRound TC", sans-serif;
-    /* background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%); */
     padding: 10px;
-    /* border-radius: 10px; */
-    /* border: 2px #C9AA6C solid; */
-    background-color: #1a4735;
-    border: 2px solid #426a55;
     border-radius: 7px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.312);
     color: #C9AA6C;
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
+    border: 3px solid #b08151;
+    color: #1b6044;
+    font-weight: bold;
+    font-family: "Gabriela", serif;
+}
+.logo-logo:hover {
+    border: 3px solid #b08151;
+}
+.logo-logo span {
+    font-family: "Chiron GoRound TC", sans-serif;
 }
 .navigation {
     display: flex;
@@ -166,6 +169,8 @@ header .current {
 .hero a, .services-page-services a,
 .services-page-consulation-card a,
 .articles a,
+.cases-section-cases a,
+.cases-all-cases,
 .articles-all-articles,
 .article-article a {
     flex: 1;
@@ -189,6 +194,8 @@ header .current {
 .services-page-consulation-card a:hover,
 .articles a:hover,
 .articles-all-articles:hover,
+.cases-section-cases a:hover,
+.cases-all-cases:hover,
 .article-article a:hover {
     background: #213b4800;
     border: 2px solid #C9AA6C;
@@ -276,7 +283,8 @@ header .current {
     padding: 0;
 }
 .services-section,
-.articles-section {
+.articles-section,
+.cases-section {
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -286,7 +294,8 @@ header .current {
     background: linear-gradient(45deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
 }
 .services-section p,
-.articles-section p {
+.articles-section p,
+.cases-section p {
     color: #a18d64;
     font-size: 16px;
     font-family: "Huninn", sans-serif;
@@ -295,7 +304,8 @@ header .current {
     margin: 0;
 }
 .services-section h2,
-.articles-section h2 {
+.articles-section h2,
+.cases-section h2 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -309,7 +319,8 @@ header .current {
     /* border-bottom: 5px solid #dc9f4e;
     box-shadow: 0px 31px 29px -26px rgba(98,100,58,0.77); */
 }
-.services, .articles {
+.services, .articles,
+.cases-section-cases {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -317,7 +328,8 @@ header .current {
     z-index: 2;
 }
 .services div,
-.articles div {
+.articles div,
+.cases-section-cases div {
     max-width: 300px;
     margin: 50px;
     padding: 20px;
@@ -325,13 +337,17 @@ header .current {
     border: 2px solid #426a55;
     border-radius: 7px;
     box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
+    position: relative;
+    overflow: hidden;
 }
 .services div:hover,
-.articles div:hover {
+.articles div:hover,
+.cases-section-cases div:hover {
     box-shadow: 0px 5px 23px 10px rgba(0,0,0,0.49);
 }
-.services h4,
-.articles h4 {
+.services h3,
+.articles h4,
+.cases-section-cases h4 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -340,14 +356,16 @@ header .current {
     font-weight: 600;
 }
 .services p,
-.articles p {
+.articles p,
+.cases-section-cases p {
     font-size: 16px;
     font-family: "Gabriela", serif;
     text-transform: none;
     color: #a18d64;
 }
 .services-header,
-.articles-header {
+.articles-header,
+.cases-section-cases-header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,29 +387,34 @@ header .current {
     height: 100%;
     background: linear-gradient(rgba(239, 217, 167, 1) 0%,  rgba(201, 170, 108, 1) 50%,  rgb(168, 122, 76) 100%);
 }
-.articles-section {
+.articles-section,
+.cases-section {
     border-top: 2px solid #C9AA6C;
     align-items: center;
     padding: 5%;
     background: linear-gradient(135deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
     background-color: #f1c080;
 }
-.articles p {
+.articles p,
+.cases-section-cases p {
     margin: 30px 0;
 }
-.articles div {
+.articles div,
+.cases-section-cases div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.articles a {
+.articles a,
+.cases-section-cases a {
     max-height: 25px;
 }
 .articles .articles-category {
     text-transform: uppercase;
     margin: 10px 0;
 }
-.articles-all-articles {
+.articles-all-articles,
+.cases-all-cases {
     max-width: 300px;
     width: 100%;
     margin-top: 60px;
@@ -486,6 +509,42 @@ header .current {
     font-weight: lighter;
     font-size: 18px;
     text-transform: none;
+}
+.cases-section-cases .cases-section-cases-category {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #f1c080;
+    border-radius: 0px;
+    box-shadow: none;
+    justify-content: space-between;
+    margin: 0;
+    align-self: center;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(90deg,rgba(239, 217, 167, 1) 0%,  rgba(201, 170, 108, 1) 50%,  rgb(168, 122, 76) 100%);
+}
+.cases-section-cases-category p {
+    font-size: 14px;
+    color: #1b6044;
+    padding: 0 15px;
+    margin: 0;
+    font-weight: bolder;
+    font-family: "Huninn", sans-serif;
+}
+.cases-section-cases-category p:last-child {
+    text-align: end;
+}
+.cases-section-cases .cases-section-cases-category:hover {
+    box-shadow: none;
+}
+.cases-section-cases div h4 {
+    margin-top: 60px;
 }
 .article-page .article-page-description {
     border-bottom: 2px solid #C9AA6C;
@@ -695,7 +754,8 @@ header .current {
         font-size: 30px;
         line-height: 30px;
     }
-    .articles div {
+    .articles div,
+    .cases-section-cases div {
         max-width: 100%;
         width: 100%;
         margin: 50px 0;
@@ -729,7 +789,8 @@ header .current {
         text-align: center;
     }
     .services-header h2,
-    .articles-header h2 {
+    .articles-header h2,
+    .cases-section-cases-header h2 {
         font-size: 30px;
         text-align: center;
     }
@@ -737,7 +798,7 @@ header .current {
         font-size: 16px;
         letter-spacing: 1px;
     }
-    .services div h4 {
+    .services div h3 {
         margin: 10px;
     }
     .services-page-services-card {
