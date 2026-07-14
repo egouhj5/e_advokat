@@ -652,6 +652,7 @@ header .current {
 }
 .reviews-section {
     position: relative;
+    background: linear-gradient(315deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
 }
 .reviews-gradient {
     position: absolute;
@@ -661,7 +662,7 @@ header .current {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: linear-gradient(rgb(178, 146, 81) 0%, rgba(201, 170, 108, 0) 80%);
+    background: linear-gradient(rgba(178, 146, 81, 0.544) 0%, rgba(201, 170, 108, 0) 80%);
 }
 .article-page .article-page-description {
     border-bottom: 2px solid #C9AA6C;
