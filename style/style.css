@@ -397,7 +397,7 @@ header .current {
 }
 .reviews-reviews div {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
