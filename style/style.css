@@ -66,6 +66,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-left: 4%;
+    text-align: center;
 }
 header a {
     padding: 5px;
@@ -103,8 +104,7 @@ header .current {
     margin-top: 20px;
     border-top: 3px solid #1b6044;
     padding: 20px 20px 20px 0;
-    text-align: left;
-    border-radius: 0;
+    border-radius: none;
     font-family: "Chiron GoRound TC", sans-serif;
 }
 .header-menu-contacts:hover {
@@ -119,6 +119,7 @@ header .current {
     font-weight: bold;
     border-radius: none;
     font-family: "Chiron GoRound TC", sans-serif;
+    text-align: center;
 }
 .header-contacts:hover {
     border: none;
@@ -842,14 +843,14 @@ header .current {
     .article-page {
         padding: 100px 5%;
     }
-    .cases-page div {
-        max-width: 50%;
-    }
     .reviews-reviews {
         max-width: 100%;
     }
 }
 @media (max-width: 1120px) {
+        .cases-page div {
+        max-width: 50%;
+    }
     .hero {
         justify-content: center;
         align-items: center;
