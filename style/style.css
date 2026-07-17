@@ -544,7 +544,8 @@ header .current {
 .services-page-title,
 .articles-page-title,
 .article-page-title,
-.article-article  {
+.article-article,
+.contacts-page-title  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -596,7 +597,8 @@ header .current {
     min-height: 30px;
 }
 .services-page-title p,
-.articles-page-title p {
+.articles-page-title p,
+.contacts-page-title p {
     color: #a18d64;
     font-size: 16px;
     font-family: "Huninn", sans-serif;
@@ -607,6 +609,7 @@ header .current {
 .services-page-title .services-page-description,
 .articles-page-title .articles-page-description,
 .article-page-title .article-page-description,
+.contacts-page-title .contacts-page-description,
 .article-article p {
     max-width: 80%;
     text-align: center;
@@ -700,7 +703,7 @@ header .current {
     height: 100%;
     z-index: 0;
     border-bottom: 2px solid #C9AA6C;
-    
+    background: linear-gradient(rgba(169, 140, 83, 0.951) 0%, rgba(201, 170, 108, 0) 60%);
 }
 .article-page .article-page-description {
     border-bottom: 2px solid #C9AA6C;
@@ -760,7 +763,8 @@ header .current {
 }
 .services-page-title h1,
 .articles-page-title h1,
-.article-page-title h1 {
+.article-page-title h1,
+.contacts-page-title h1 {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
@@ -947,7 +951,8 @@ header .current {
         width: 100%;
         margin: 50px 0;
     }
-    .articles-page-title {
+    .articles-page-title,
+    .contacts-page-title {
     max-width: 100%;
     width: 100%;
     }
