@@ -49,7 +49,7 @@ main {
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.312);
     color: #C9AA6C;
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
-    border: 3px solid #b08151;
+    border: 3px solid #ddb76b;
     color: #1b6044;
     font-weight: bold;
     font-family: "Gabriela", serif;
@@ -176,7 +176,8 @@ header .current {
 .cases-all-cases,
 .articles-all-articles,
 .article-article a,
-.contacts-section a {
+.contacts-section a,
+.contacts-page-contacts-right button {
     flex: 1;
     padding: 15px;
     border-radius: 5px;
@@ -207,7 +208,8 @@ header .current {
 .cases-page a:hover,
 .cases-all-cases:hover,
 .article-article a:hover,
-.contacts-section a:hover {
+.contacts-section a:hover,
+.contacts-page-contacts-right button:hover {
     background: #213b4800;
     border: 2px solid #C9AA6C;
     color: #C9AA6C;
@@ -911,6 +913,11 @@ header .current {
 .contacts-page-contacts-left {
     padding: 20px;
 }
+.contacts-page-contacts .contacts-page-contacts-right {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
 .contacts-page-contacts-left h2,
 .contacts-page-contacts-right h2 {
     border-bottom: 2px solid #C9AA6C;
@@ -926,6 +933,51 @@ header .current {
 }
 .contacts-page-contacts-right h2 {
     width: 90%;
+}
+.contacts-page-contacts-right div {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+.contacts-page-contacts-right form {
+    padding: 20px 0 0 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contacts-page-contacts-right div label {
+    color: #C9AA6C;
+}
+.contacts-page-contacts-right input,
+.contacts-page-contacts-right textarea {
+    border-radius: 5px;
+    border: 2px solid #C9AA6C;
+    padding: 15px;
+    margin: 5px 0;
+    outline: none;
+    background-color: #f0de5620;
+    color: #C9AA6C;
+    font-size: 16px;
+    font-family: "Chiron GoRound TC", sans-serif;
+}
+.contacts-page-contacts-right textarea {
+    height: 100px;
+    text-align: left;
+    resize: none;
+}
+.contacts-page-contacts-right input::placeholder,
+.contacts-page-contacts-right textarea::placeholder {
+    color: #C9AA6C;
+}
+.contacts-page-contacts-right button {
+    width: 100%;
+    max-height: 70px;
+    margin: 0;
+    margin-top: auto;
+    box-sizing: border-box;
 }
 .contacts-page-contacts-left a {
     background: none;
@@ -961,7 +1013,8 @@ header .current {
     text-align: left;
 }
 .contacts-page-type,
-.contacts-page-contacts-left div div div p {
+.contacts-page-contacts-left div div div p,
+.contacts-page-contacts-right label {
     color: #937c4c;
     font-family: "Gabriela", serif;
 }

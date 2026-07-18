@@ -19,12 +19,14 @@ const transporter = nodemailer.createTransport({
 app.post('/submit-form', (req, res) => {
     const userName = req.body.name;
     const userPhone = req.body.phone;
-
+    const userEmail = req.body.email
+    const userSit = req.body.sit
+    
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         subject: `Ви отримали запит на безкоштовну консультацію від: ${userName}`,
-        text: `You have received a new lead:\n\nІм'я: ${userName}\nСитуація: ${userPhone}`
+        text: `You have received a new lead:\n\nІм'я: ${userName}\n\nНомер телефону: ${userPhone}\n\nПошта: ${userEmail}\n\nСитуація: ${userSit}`
     };
 
     // We wait for the email to send before telling the user anything
