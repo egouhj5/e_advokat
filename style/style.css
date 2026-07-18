@@ -104,7 +104,7 @@ header .current {
     margin-top: 20px;
     border-top: 3px solid #1b6044;
     padding: 20px 20px 20px 0;
-    border-radius: none;
+    border-radius: 0;
     font-family: "Chiron GoRound TC", sans-serif;
 }
 .header-menu-contacts:hover {
@@ -172,6 +172,7 @@ header .current {
 .articles a,
 .cases-section-cases a,
 .cases-page a,
+.contacts-page a,
 .cases-all-cases,
 .articles-all-articles,
 .article-article a,
@@ -502,7 +503,8 @@ header .current {
 }
 .articles p,
 .cases-section-cases p,
-.cases-page p {
+.cases-page p,
+.conacts-page p {
     margin: 30px 0;
 }
 .articles div,
@@ -529,7 +531,8 @@ header .current {
 }
 .services-page,
 .articles-page,
-.article-page {
+.article-page,
+.contacts-page {
     background: linear-gradient(206deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
     padding: 100px 10%;
     display: flex;
@@ -893,8 +896,124 @@ header .current {
 .services-page-consulation-card a {
     margin: 30px 0 0 0;
 }
+.contacts-page-contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.contacts-page-contacts div {
+    background-color: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 7px;
+    width: 45%;
+    padding: 20px;
+}
+.contacts-page-contacts-left {
+    padding: 20px;
+}
+.contacts-page-contacts-left h2,
+.contacts-page-contacts-right h2 {
+    border-bottom: 2px solid #C9AA6C;
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    font-family: "Cormorant SC", serif;
+    font-weight: 600;
+    padding: 10px;
+    width: 60%;
+    margin: 0;
+}
+.contacts-page-contacts-right h2 {
+    width: 90%;
+}
+.contacts-page-contacts-left a {
+    background: none;
+    border: 0;
+    padding: 0;
+}
+.contacts-page-contacts-left a:hover {
+    color: #fcd49f;
+}
+.contacts-page-contacts-left div {
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.contacts-page-contacts-left div div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    justify-content: left;
+}
+.contacts-page-contacts-left div div div {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+.contacts-page-contacts-left div div div p {
+    margin: 0;
+    text-align: left;
+}
+.contacts-page-type,
+.contacts-page-contacts-left div div div p {
+    color: #937c4c;
+    font-family: "Gabriela", serif;
+}
+.contacts-page .contacts-page-type {
+    color: #bf9e5e;
+}
+.contacts-page .contacts-page-info {
+    font-size: 20px;
+    color: #C9AA6C;
+    font-weight: bold;
+    font-family: "Chiron GoRound TC", sans-serif;
+}
+.contacts-page svg {
+    background-color: #c9aa6c65;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #c9aa6cc2;
+}
+.contacts-page-contacts-left .contacts-page-messengers {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 30%;
+    padding: 10px 20px;
+}
+.contacts-page-contacts-left-p {
+    color: #C9AA6C;
+    font-size: 20px;
+    font-family: "Gabriela", serif;
+    margin: 0px 20px;
+    padding: 20px 0;
+    border-top: 2px solid #C9AA6C;
+    width: 60%;
+}
+.contacts-page-messengers a {
+    margin: 0;
+    padding: 5px 15px;
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
+    font-weight: bold;
+    border: 2px solid #C9AA6C;
+    font-size: 20px;
+}
+.contacts-page-messengers a:hover {
+    color: #1a4735;
+}
+.contacts-page-messengers a svg {
+    background: none;
+    border: none;
+}
 @media (max-width: 1573px) {
-    .article-page {
+    .article-page,
+    .contacts-page {
         padding: 100px 5%;
     }
     .reviews-reviews {
@@ -946,7 +1065,8 @@ header .current {
     }
     .articles div,
     .cases-section-cases div,
-    .cases-page div {
+    .cases-page div,
+    .articles-page div {
         max-width: 100%;
         width: 100%;
         margin: 50px 0;

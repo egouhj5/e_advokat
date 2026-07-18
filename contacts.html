@@ -22,6 +22,45 @@
             document.body.insertBefore(div, document.body.firstChild);
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formElement = document.getElementById('consultationForm');
+            
+            if (!formElement) return;
+
+            formElement.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new URLSearchParams(new FormData(event.target));
+
+                try {
+                    const response = await fetch('http://localhost:3000/submit-form', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: formData
+                    });
+
+                    // Get the text message sent back by the server
+                    const resultText = await response.text();
+
+                    if (response.ok) {
+                        // If status is 200 OK
+                        alert(resultText); 
+                        event.target.reset(); 
+                    } else {
+                        // If status is 500 (e.g. invalid App Password configuration)
+                        alert("Помилка сервера: " + resultText);
+                    }
+                } catch (error) {
+                    // If the server is completely shut down or offline
+                    console.error("Fetch Error:", error);
+                    alert("Не вдалося підключитися до сервера. Перевірте, чи запущений Node.js backend.");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -45,30 +84,92 @@
         <nav class="navigation">
             <a href="index.html">Головна</a>
             <a href="services.html">Послуги</a>
-            <a href="articles.html" class="current">Статті</a>
+            <a href="articles.html">Статті</a>
             <a href="cases.html">Виграні справи</a>
             <a href="">Про нас</a>
-            <a href="contacts.html">Контакти</a>
+            <a href="contacts.html" class="current">Контакти</a>
         </nav>
         <a class="header-contacts" href="tel:+380992873957">+380-99-287-39-57</a>
             <nav class="header-menu-navigation">
                 <a href="index.html">Головна</a>
                 <a href="services.html">Послуги</a>
-                <a href="articles.html" class="current">Статті</a>
+                <a href="articles.html">Статті</a>
                 <a href="cases.html">Виграні справи</a>
                 <a href="">Про нас</a>
-                <a href="contacts.html">Контакти</a>
+                <a href="contacts.html" class="current">Контакти</a>
                 <a class="header-menu-contacts" href="tel:+380992873957">+380-99-287-39-57</a>
             </nav>
     </header>
     <main>
         <section class="contacts-page">
             <div class="contacts-page-title">
-                <p>Зав'яжіться з нами та отримайте безкоштовну консультацію та юридичну допомогу</p>
+                <p>Безкоштовна консультація</p>
                 <h1>Контакти</h1>
                 <p class="contacts-page-description">
-                    Безкоштовна консультація
+                    Зав'яжіться з нами та отримайте безкоштовну консультацію та юридичну допомогу
                 </p>
+            </div>
+            <div class="contacts-page-contacts">
+                <div class="contacts-page-contacts-left">
+                    <h2>Наша контактна інформація</h2>
+                    <div>
+                        <div>
+                            <svg width="30" height="30" viewBox="0 0 16 16"><use href="#phone-icon"/></svg>
+                            <div>
+                                <p class="contacts-page-type">Телефон</p>
+                                <a class="contacts-page-info" href="tel:+380992873957">+380-99-287-39-57</a>
+                                <p>Екстрені питання — 24/7</p>
+                            </div>
+                        </div>
+                        <div>
+                            <svg width="30" height="30" viewBox="0 0 16 16"><use href="#mail-icon"/></svg>
+                            <div>
+                                <p class="contacts-page-type">Email</p>
+                                <p class="contacts-page-info">advokat.kravchenko.alex@gmail.com</p>
+                            </div>
+                        </div>
+                        <div>
+                            <svg width="30" height="30" viewBox="0 0 16 16"><use href="#location-icon"/></svg>
+                            <div>
+                                <p class="contacts-page-type">Адреса</p>
+                                <a class="contacts-page-info" href="https://maps.google.com/?q=Бровари, вул. Грушевського, 17" target="_blank">м. Бровари, вул. Грушевського, 17</a>
+                                <p>Прийом за попереднім записом</p>
+                            </div></div>
+                        <div>
+                            <svg width="30" height="30" viewBox="0 0 16 16"><use href="#clock-icon"/></svg>
+                            <div>
+                                <p class="contacts-page-type">Графік роботи</p>
+                                <p class="contacts-page-info">Пн–Пт: 9:00–18:00</p>
+                                <p>Сб–Нд: за попереднім записом</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="contacts-page-contacts-left-p">Месенджери:</p>
+                    <div class="contacts-page-messengers">
+                        <a href="">
+                            <svg width="30" height="30" viewBox="0 0 24 24"><use href="#telegram-icon"/></svg>
+                            Telegram
+                        </a>
+                        <a href="">
+                            <svg width="30" height="30" viewBox="0 0 24 24"><use href="#viber-icon"/></svg>
+                            Viber
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts-page-contacts-right">
+                    <h2>Записатись на безкоштовну консультацію</h2>
+                    <form id="consultationForm">
+                        <div>
+                            <label for="user-name" style="color: white;">Name:</label>
+                            <input type="text" id="user-name" name="name" required placeholder="Ім'я прізвище">
+                        </div>
+                        <div>
+                            <label for="user-phone" style="color: white;">Phone Number:</label>
+                            <input type="tel" id="user-phone" name="phone" required placeholder="+380671234567">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    </div>
             </div>
         </section>
     </main>
