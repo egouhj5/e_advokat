@@ -910,10 +910,8 @@ header .current {
     width: 45%;
     padding: 20px;
 }
-.contacts-page-contacts-left {
-    padding: 20px;
-}
-.contacts-page-contacts .contacts-page-contacts-right {
+.contacts-page-contacts .contacts-page-contacts-right,
+.contacts-page-contacts .contacts-page-contacts-left {
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -927,9 +925,8 @@ header .current {
     font-size: 35px;
     font-family: "Cormorant SC", serif;
     font-weight: 600;
-    padding: 10px;
+    padding: 10px 0;
     width: 60%;
-    margin: 0;
 }
 .contacts-page-contacts-right h2 {
     width: 90%;
@@ -999,6 +996,8 @@ header .current {
     gap: 20px;
     border: none;
     justify-content: left;
+    padding-block: auto;
+    padding-inline: 0;
 }
 .contacts-page-contacts-left div div div {
     border: none;
@@ -1040,13 +1039,12 @@ header .current {
     flex-direction: row;
     gap: 20px;
     width: 30%;
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 .contacts-page-contacts-left-p {
     color: #C9AA6C;
     font-size: 20px;
     font-family: "Gabriela", serif;
-    margin: 0px 20px;
     padding: 20px 0;
     border-top: 2px solid #C9AA6C;
     width: 60%;
@@ -1175,14 +1173,29 @@ header .current {
     .contacts-page {
         padding: 10px;
     }
+    .contacts-page-contacts .contacts-page-contacts-left,
+    .contacts-page-contacts .contacts-page-contacts-right {
+        padding: 15px;
+    }
+    .contacts-page-contacts-left h2,
+    .contacts-page-contacts-right h2 {
+        width: 100%;
+        text-align: center;
+        margin: initial none;
+        margin: 0;
+    }
+    .contacts-page-contacts-left-p {
+        margin: 0;
+        width: 100%;
+    }
     .contacts-page-contacts div{
-        padding: 5px;
+        padding: 10px 0;
     }
     .contacts-page .contacts-page-info {
         font-size: 18px;
     }
     .contacts-page-contacts-left div div {
-        gap: 5px;
+        gap: 10px;
     }
     .contacts-page-title {
         margin-top: 80px;
