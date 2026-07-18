@@ -1212,6 +1212,18 @@ header .current {
         align-self: center;
     }
 }
+@media (max-width: 1300px) {
+    .contacts-page-contacts {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .contacts-page-contacts div {
+        width: 100%;
+    }
+    .contacts-page-contacts-right button {
+        margin-top: 10px;
+    }
+}
 .menu-icon .icon-line,
 .menu-icon .icon-dot {
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
