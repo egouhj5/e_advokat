@@ -13,13 +13,13 @@ header {
     width: 100%;
     box-sizing: border-box;
     position:fixed;
-    top: -400px;
+    top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    padding-top: 420px;
+    padding-top: env(safe-area-inset-top, 0px);
     margin: 0px;
     border-bottom: 2px solid #f1c080;
     background: linear-gradient(227deg,rgb(189, 157, 92) 10.5%, rgb(232, 204, 138) 24.5%, rgb(189, 157, 92) 50%, rgb(189, 157, 92) 60%, rgb(232, 204, 138) 70%, rgb(154, 107, 59) 100%);
