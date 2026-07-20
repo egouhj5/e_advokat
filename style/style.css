@@ -1167,6 +1167,9 @@ header .current {
     }
 }
 @media (max-width:576px) {
+    .header {
+        padding: 20px;
+    }
     .hero-left h1 {
         font-size: 22px;
         line-height: 20px;
