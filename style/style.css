@@ -181,9 +181,8 @@ header .current {
     flex: 1;
     padding: 15px;
     border-radius: 5px;
-    border: none;
+    /* border: none; */
     font-family: "Gabriela", serif;
-    font-weight: 300; 
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
     font-weight: bold;
     color: #1a4735;
@@ -331,6 +330,9 @@ header .current {
 }
 .advantages-section svg {
     color: #1b6044;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #1a4735;
+    width: 60%;
 }
 .services-section p,
 .articles-section p,
@@ -359,6 +361,38 @@ header .current {
     letter-spacing: 2px;
     padding: 20px;
     margin: 0;
+}
+.advantages-cards {
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: stretch center;
+    flex-wrap: wrap;
+}
+.advantages-cards div {
+    padding: 20px;
+    min-width: 300px;
+    max-width: 300px;
+    border-radius: 5px;
+    font-family: "Gabriela", serif; 
+    background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
+    font-weight: bold;
+    color: #1a4735;
+    border: 2px solid #C9AA6C;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    white-space: unset;
+    box-sizing: border-box;
+    flex: 3;
+    margin-bottom: 20px;
+}
+.advantages-cards p {
+    color: #1a4735;
 }
 .reviews-header h2,
 .reviews-header p{
@@ -729,6 +763,9 @@ header .current {
 }
 .advantages-title p {
     color: #C9AA6C;
+    text-align: center;
+}
+.advantages-title h2 {
     text-align: center;
 }
 .article-page .article-page-description {
@@ -1170,6 +1207,18 @@ header .current {
     }
     .article-consultation {
         max-width: 80%;
+    }
+}
+@media (max-width: 780px) {
+    .advantages-cards {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .advantages-cards div {
+        min-width: 100%;
+        max-width: 100%;
+
     }
 }
 @media (max-width:576px) {
