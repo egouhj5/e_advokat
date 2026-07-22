@@ -25,6 +25,37 @@ header {
     z-index: 9999;
     box-shadow: 0px 5px 27px 0px rgba(0,0,0,0.59);
 }
+footer {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 0 40px;
+    background: linear-gradient(227deg,rgb(189, 157, 92) 10.5%, rgb(232, 204, 138) 24.5%, rgb(189, 157, 92) 50%, rgb(189, 157, 92) 60%, rgb(232, 204, 138) 70%, rgb(154, 107, 59) 100%);
+    border-top: 2px solid #f1c080;
+}
+footer div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+footer div div div {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 0;
+}
+.footer-messengers a{
+    color: #C9AA6C;
+    padding: 10px;
+    background: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 5px;
+}
 .menu-button {
     display: none;
     justify-content: center;
@@ -42,22 +73,25 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.logo-logo {
+.logo-logo,
+.logo-logo-footer {
     font-size: 25px;
     padding: 10px;
     border-radius: 7px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.312);
     color: #C9AA6C;
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgba(130, 88, 45, 1) 100%);
-    border: 3px solid #ddb76b;
+    border: 3px solid #C9AA6C;
     color: #1b6044;
     font-weight: bold;
     font-family: "Gabriela", serif;
 }
-.logo-logo:hover {
-    border: 3px solid #b08151;
+.logo-logo:hover,
+.logo-logo-footer:hover {
+    border: 3px solid #cfb586;
 }
-.logo-logo span {
+.logo-logo span,
+.logo-logo-footer span {
     font-family: "Chiron GoRound TC", sans-serif;
 }
 .navigation {
@@ -67,7 +101,8 @@ main {
     align-items: center;
     text-align: center;
 }
-header a {
+header a,
+.footer-menu-navigation a {
     padding: 5px;
     text-decoration: none;
     color: #37584b;
@@ -77,19 +112,27 @@ header a {
     font-weight: 600;
     font-size: 18px;
 }
-.header-menu-navigation {
+.header-menu-navigation,
+.footer-menu-navigation {
     display: none;
     flex-direction: column;
     gap: 5px;
     opacity: 0;
     position: absolute;
 }
-header a:hover {
+.footer-menu-navigation {
+    display: flex;
+    opacity: 1;
+    position: initial;
+}
+header a:hover,
+footer-menu-navigation a:hover {
     color: #1b6044;
     border: 3px solid #1b6044;
     border-radius: 5px;
 }
-header .current {
+header .current,
+.footer-menu-navigation .current {
     color: #1b6044;
     border: 3px solid #1b6044;
     border-radius: 5px;
@@ -110,7 +153,14 @@ header .current {
     border: none;
     border-top: 3px solid #1b6044;
 }
-.header-contacts {
+.footer-contacts p {
+    color: #1a4735;
+    font-family: "Gabriela", serif;
+    font-weight: bolder;
+    font-size: 24px;
+}
+.header-contacts,
+.footer-contact {
     color: #1b6044;
     font-size: 16px;
     background: none;
@@ -119,6 +169,31 @@ header .current {
     border-radius: none;
     font-family: "Chiron GoRound TC", sans-serif;
     text-align: center;
+}
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+}
+.footer-contact {
+    text-align: left;
+    padding: 10px 0;
+}
+.footer-policy {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-top: 2px solid #1a4735;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.footer-policy a,
+.footer-policy p {
+    color: #1a4735;
+    padding: 10px;
+    font-family: "Chiron GoRound TC", sans-serif;
+    font-weight: bold;
 }
 .header-contacts:hover {
     border: none;
@@ -1263,6 +1338,24 @@ header .current {
     }
 }
 @media (max-width: 955px) {
+    footer div {
+        flex-direction: column;
+        gap: 30px;
+        align-items: start;
+    }
+    .footer-policy {
+        flex-direction: row;
+        gap: 0;
+    }
+    .footer-social {
+        gap: 0;
+    }
+    .footer-contacts {
+        gap: 10px;
+    }
+    .footer-contacts p {
+        margin: 0px;
+    }
     .contacts-section {
         padding: 40px 20px;
     }
