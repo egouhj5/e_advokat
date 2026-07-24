@@ -769,6 +769,7 @@ header .current,
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 20px;
+    text-align: center;
 }
 .services-page-title .services-page-description,
 .articles-page-title .articles-page-description,
