@@ -693,7 +693,8 @@ header .current,
 .articles-page,
 .article-page,
 .contacts-page,
-.about-us-page {
+.about-us-page,
+.policy-page {
     background: linear-gradient(206deg,rgba(24, 36, 31, 1) 21%, rgba(24, 92, 58, 1) 58%, rgba(41, 87, 63, 1) 81%, rgba(46, 84, 61, 1) 100%);
     padding: 100px 10%;
     display: flex;
@@ -702,6 +703,9 @@ header .current,
     min-height: 1080px;
     align-items: center;
 }
+.policy-page {
+    min-height: 0px;
+}
 .articles-page {
     padding: 100px 40px;
 }
@@ -709,7 +713,8 @@ header .current,
 .articles-page-title,
 .article-page-title,
 .article-article,
-.contacts-page-title  {
+.contacts-page-title,
+.policy-text  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -719,6 +724,24 @@ header .current,
     box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
     max-width: 800px;
     width: 80%;
+}
+.policy-text {
+    width: 90%;
+    max-width: 1080px;
+    padding: 30px 0;
+}
+.policy-image {
+    width: 90%;
+    max-width: 1080px;
+}
+.policy-image img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #1a4735;
+    border: 2px solid #426a55;
+    border-radius: 7px;
+    box-shadow: 0px 5px 23px 5px rgba(0,0,0,0.49);
 }
 .article-page-title,
 .article-article {
@@ -775,7 +798,8 @@ header .current,
 .articles-page-title .articles-page-description,
 .article-page-title .article-page-description,
 .contacts-page-title .contacts-page-description,
-.article-article p {
+.article-article p,
+.policy-text p {
     max-width: 80%;
     text-align: center;
     color: #a18d64;
@@ -899,13 +923,15 @@ header .current,
     align-items: start;
     gap: 20px;
 }
-.article-article span {
+.article-article span,
+.policy-text span {
     background: linear-gradient(227deg,rgba(201, 170, 108, 1) 21%, rgba(239, 217, 167, 1) 49%, rgb(168, 122, 76) 100%);
     background-clip: text;
     color: transparent;
     font-size: 25px;
 }
-.article-article p {
+.article-article p,
+.policy-text p {
     text-align: left;
     font-size: 20px;
     line-height: 40px;
@@ -914,6 +940,10 @@ header .current,
     padding: 0 20px 0 0;
     margin: 20px;
     width: 60%;
+}
+.policy-text p {
+    border: none;
+    width: 100%;
 }
 .article-article .article-bold {
     background: none;
@@ -1440,10 +1470,10 @@ header .current,
     max-width: 100%;
     width: 100%;
     }
-    .article-article {
+    .article-article,
+    .policy-page {
         padding: 30px 0;
         width: 100%;
-        max-width: calc(90% + 30px);
     }
     .article-article p {
         line-height: 30px;
