@@ -1227,6 +1227,7 @@ header .current,
     color: #C9AA6C;
     font-weight: bold;
     font-family: "Chiron GoRound TC", sans-serif;
+    text-align: left;
 }
 .contacts-page svg {
     background-color: #c9aa6c65;
